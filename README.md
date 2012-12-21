@@ -32,7 +32,7 @@ Requirements
 ------------------------------------------------------------
 
 1. Go to your main ZF2 application `composer.json` file and add
-"dkcwd/DkcwdZf2Munee": "*" to the require section.
+`"dkcwd/DkcwdZf2Munee": "*"` to the require section.
 1. Run `curl -s http://getcomposer.org/installer | php`
 1. Run `php composer.phar install`
 1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable
@@ -51,8 +51,9 @@ All CSS is automatically compiled through LESS and cached, there is nothing extr
 In your view script call:
 
     echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'));
-to output a formatted request which will allow all css files specified to be handled and minified in one request, alternatively 
-    echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'), false);    
+to output a formatted request which will allow all css files specified to be handled and minified in one request, alternatively
+    
+	echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'), false);    
 for the same result but without minification.
 
 
