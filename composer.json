@@ -1,0 +1,27 @@
+{
+    "name": "dkcwd/DkcwdZf2Munee",
+    "description": "Zend Framework 2 module leveraging 'Munee' an asset optimisation application developed by Cody Lundquist",
+    "keywords": ["php","zf2","module","less","optimizing","css","javascript","lessphp"],
+    "homepage": "http://github.com/dkcwd/DkcwdZf2Munee",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dave Clark",
+            "email": "dave.dkcwd.com.au",
+            "homepage": "https://dkcwd.com.au",
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "DkcwdZf2Munee\\": "src/",
+            "DkcwdZf2MuneeTest\\": "test/"
+        },
+        "classmap": [
+            "./"
+        ]
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "meenie/munee": "*"
+    }
+}
