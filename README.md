@@ -64,7 +64,7 @@ Using Munee, you resize/crop/stretch/fill images on-the-fly using a set of param
 In your view script call:
 
     echo $this->MuneeImg('path-to-image.jpg', 'w[500]h[500]f[true]fc[444444]');
-to output a formatted request using the chosen resize parameters.  You can specify any additional image attributes such as and id or class by supplying an array full of key value pairs as a third parameter.         
+to output a formatted request using the chosen resize parameters.  You can specify any additional image attributes such as an id or class by supplying an array full of key value pairs as a third parameter.         
 
 Resize Parameters - Parameters can either be in long form or use their shortened form.  The value for an alias must be wrapped in square brackets `[]`. There is no need to put any characters between each parameter, although you can if you want.
 
