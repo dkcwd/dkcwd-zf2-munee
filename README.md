@@ -1,5 +1,5 @@
-DkcwdZf2Munee: Use munee for asset optimisation in your ZF2 Application
-=======================================================================
+DkcwdZf2Munee: Use munee in your ZF2 Application
+================================================
 
 ---
 
@@ -36,7 +36,7 @@ Requirements
 1. Run `curl -s http://getcomposer.org/installer | php`
 1. Run `php composer.phar install`
 1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable
-1. Once the installation is complete go to your ZF2 application.config.php file and add 'DkcwdZf2Munee' to the list of modules
+1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules
 
 
 Usage Instructions
@@ -46,6 +46,7 @@ Usage Instructions
 
 
 **One Request For All CSS with auto minification**
+
 All CSS is automatically compiled through LESS and cached, there is nothing extra that you need to do.  Any changes you make to your CSS, even LESS files you have `@import` will automatically recreate the cache invalidate the client side cache and force the browser to download the newest version.
 
 In your view script call:
@@ -77,11 +78,13 @@ Resize Parameters - Parameters can either be in long form or use their shortened
 
 
 **One Request For All JS with auto minification**
+
 All JavaScript is served through Munee so that it can handle the client side caching.
 
 In your view script call:
 
     echo $this->MuneeJs(array('/js/script1.js', '/js/script2.js'));
-to output a formatted request which will allow all js files specified to be handled and minified in one request, alternatively 
+to output a formatted request which will allow all js files specified to be handled and minified in one request, alternatively
+
     echo $this->MuneeCss(array('/js/script1.js', '/js/script2.js'), false);    
 for the same result but without minification.
