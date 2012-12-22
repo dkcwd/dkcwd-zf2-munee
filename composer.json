@@ -1,6 +1,6 @@
 {
     "name": "dkcwd/dkcwd-zf2-munee",
-    "description": "Zend Framework 2 module leveraging 'Munee' an asset optimisation application developed by Cody Lundquist",
+    "description": "Zend Framework 2 module leveraging 'Munee' an asset optimisation library developed by Cody Lundquist",
     "keywords": ["php","zf2","module","less","optimizing","css","javascript","lessphp"],
     "homepage": "http://github.com/dkcwd/dkcwd-zf2-munee",
     "license": "MIT",
