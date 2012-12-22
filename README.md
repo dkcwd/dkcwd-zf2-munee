@@ -6,13 +6,14 @@ Use munee to optimise assets in your ZF2 App
 Purpose of the module
 ---------------------
 DkcwdZf2Munee is a ZF2 module which brings the joy of '[munee](http://github.com/meenie/munee)', an asset optimisation library developed by Cody Lundquist, to ZF2 applications.
-It is easy to implement and avoids the need for a munee.php file by using a custom route with a single controller while providing some simple ZF2 view helpers for additional convenience when leveraging the functionality provided by munee.
+It is easy to implement and provides access to the features of [munee](http://github.com/meenie/munee) through 3 ZF2 view helpers, 1 custom route and 1 simple controller.
 
 Features of the module
 ----------------------
  
-+ 3 simple ZF2 view helpers to correctly format munee requests without needing to alter your .htaccess file
-+ 1 custom route to handle munee requests
++ 3 ZF2 view helpers to correctly format munee requests
++ 1 custom route to send munee requests to the munee controller
++ 1 simple controller to handle munee requests
 
 What is Munee?
 --------------
@@ -31,8 +32,7 @@ Requirements
 [Composer](https://packagist.org/) Installation Instructions
 ------------------------------------------------------------
 
-1. Go to your main ZF2 application `composer.json` file and add
-`"dkcwd/dkcwd-zf2-munee": "*"` to the require section.
+1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "*"` to the require section.
 1. Run `curl -s http://getcomposer.org/installer | php`
 1. Run `php composer.phar install`
 1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable
@@ -44,15 +44,21 @@ Usage Instructions
 
 ### View Helpers ###
 
+The functionality provided by munee is accessed using view helpers in your ZF2 application view scripts.  The most likely place you will use the CSS and Js view helpers is within your layout script for generating a correctly formatted link to aggregate all your css and javascript files.  There are 3 view helpers:
 
-**One Request For All CSS with auto minification**
++ MuneeCss($arrayOfCssFiles, $minify = true) for working with CSS files
++ MuneeImg($pathToImage, $resizeParams, $anyAdditionalHtmlAttibutes = null) for working with images
++ MunneJs($arrayOfJsFiles, $minify = true) for working with Js files
 
-All CSS is automatically compiled through LESS and cached, there is nothing extra that you need to do.  Any changes you make to your CSS, even LESS files you have `@import` will automatically recreate the cache invalidate the client side cache and force the browser to download the newest version.
 
-In your view script call:
+**MuneeCss: One Request For All CSS with auto minification**
+
+All CSS is automatically compiled through LESS and cached, there is nothing extra that you need to do.  Any changes you make to your CSS, even LESS files you have `@import` will automatically recreate the cache then invalidate the client side cache and force the browser to download the newest version.
+
+Example usage: In your view script do
 
     echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'));
-to output a formatted request which will allow all css files specified to be handled and minified in one request, alternatively
+to output a formatted request which will allow all css files specified to be handled and minified in one request, alternatively you can do
     
 	echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'), false);    
 for the same result but without minification.
@@ -60,11 +66,12 @@ for the same result but without minification.
 
 **Handling/Resizing Images**
 
-Using Munee, you resize/crop/stretch/fill images on-the-fly using a set of parameters.  The resulting image will be cached and served up on subsequent requests.  If the source image is modified, it will recreate the cache and invalidate the client side cache and force the browser to download the newest version.
-In your view script call:
+Using Munee, you resize/crop/stretch/fill images on-the-fly using a set of parameters.  The resulting image will be cached and served up on subsequent requests.  If the source image is modified, it will recreate the cache then invalidate the client side cache and force the browser to download the newest version.
 
-    echo $this->MuneeImg('path-to-image.jpg', 'w[500]h[500]f[true]fc[444444]');
-to output a formatted request using the chosen resize parameters.  You can specify any additional image attributes such as an id or class by supplying an array full of key value pairs as a third parameter.         
+Example usage: In your view script do
+
+    echo $this->MuneeImg('path-to-image.jpg', 'w[100]h[100]');
+to output a formatted request using the chosen resize parameters.  You can specify any additional image attributes such as an id or class by supplying an array full of key value pairs as a third parameter like this: `array('class' => 'myImageClass', 'rel' => 'someTrigger')`         
 
 Resize Parameters - Parameters can either be in long form or use their shortened form.  The value for an alias must be wrapped in square brackets `[]`. There is no need to put any characters between each parameter, although you can if you want.
 
@@ -81,10 +88,12 @@ Resize Parameters - Parameters can either be in long form or use their shortened
 
 All JavaScript is served through Munee so that it can handle the client side caching.
 
-In your view script call:
+Example usage: In your view script do
 
     echo $this->MuneeJs(array('/js/script1.js', '/js/script2.js'));
-to output a formatted request which will allow all js files specified to be handled and minified in one request, alternatively
+to output a formatted request which will allow all js files specified to be handled and minified in one request, alternatively you can do
 
     echo $this->MuneeCss(array('/js/script1.js', '/js/script2.js'), false);    
 for the same result but without minification.
+
+Hope you enjoy using this module :-)
