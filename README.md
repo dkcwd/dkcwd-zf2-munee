@@ -1,11 +1,11 @@
-DkcwdZf2Munee: Use munee in your ZF2 Application
-================================================
+Use munee to optimise assets in your ZF2 App
+============================================
 
 ---
 
 Purpose of the module
 ---------------------
-DkcwdMunee is a ZF2 module which brings the joy of 'munee', an asset optimisation library developed by Cody Lundquist, to ZF2 applications.
+DkcwdZf2Munee is a ZF2 module which brings the joy of 'munee', an asset optimisation library developed by Cody Lundquist, to ZF2 applications.
 It is easy to implement and avoids the need for a munee.php file by using a custom route with a single controller while providing some simple ZF2 view helpers for additional convenience when leveraging the functionality provided by munee.
 
 Features of the module
@@ -24,15 +24,15 @@ Requirements
 ------------
 
 + PHP5.3.3+
-+ A Zend Framework 2 application you can use to work with the module
-+ Composer for managing the installation and updating of dependencies 
++ Composer for installing and updating all dependencies
++ A Zend Framework 2 application you can use to work with the module 
 
 
 [Composer](https://packagist.org/) Installation Instructions
 ------------------------------------------------------------
 
 1. Go to your main ZF2 application `composer.json` file and add
-`"dkcwd/DkcwdZf2Munee": "*"` to the require section.
+`"dkcwd/dkcwd-zf2-munee": "*"` to the require section.
 1. Run `curl -s http://getcomposer.org/installer | php`
 1. Run `php composer.phar install`
 1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable
