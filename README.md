@@ -5,7 +5,7 @@ Use munee to optimise assets in your ZF2 App
 
 Purpose of the module
 ---------------------
-DkcwdZf2Munee is a ZF2 module which brings the joy of 'munee', an asset optimisation library developed by Cody Lundquist, to ZF2 applications.
+DkcwdZf2Munee is a ZF2 module which brings the joy of '[munee](http://github.com/meenie/munee)', an asset optimisation library developed by Cody Lundquist, to ZF2 applications.
 It is easy to implement and avoids the need for a munee.php file by using a custom route with a single controller while providing some simple ZF2 view helpers for additional convenience when leveraging the functionality provided by munee.
 
 Features of the module
