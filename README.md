@@ -32,12 +32,62 @@ Requirements
 [Composer](https://packagist.org/) Installation Instructions
 ------------------------------------------------------------
 
-1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "*"` to the require section.
+Just for reference when using Composer, if you have a slow connection consider using `COMPOSER_PROCESS_TIMEOUT=4000` prior to any `php composer.phar` commands to avoid a `[Symfony\Component\Process\Exception\RuntimeException] The process timed out` error.  For example you may want to use `COMPOSER_PROCESS_TIMEOUT=4000 php composer.phar update` instead of `php composer.phar update`.
+
+### If you have a Zf2 project set up which you can use ###
+
+1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "*"` making sure your `"minimum-stability"` setting is set to `"dev"` as an example assuming no other requirements are specified your composer.json file would look like this:
+
+		{
+			"name": "zendframework/skeleton-application",
+			"description": "Skeleton Application for ZF2",
+			"license": "BSD-3-Clause",
+			"keywords": [
+				"framework",
+				"zf2"
+			],    
+			"homepage": "http://framework.zend.com/",
+			"minimum-stability": "dev",
+			"require": {
+				"php": ">=5.3.3",
+				"zendframework/zendframework": "2.*",
+				"dkcwd/dkcwd-zf2-munee": "*"
+			}
+		}  
+
 1. Run `curl -s http://getcomposer.org/installer | php`
-1. Run `php composer.phar install`
-1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable
+1. Run `php composer.phar update`
+1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable or else it won't work
 1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules
 
+### If you do not have a Zf2 project set up which you can use ###
+
+1. cd to the directory you want to create your new ZF2 project in
+1. Run `curl -s https://getcomposer.org/installer | php`
+1. Run `php composer.phar create-project --repository-url="http://packages.zendframework.com" zendframework/skeleton-application full/path/to/new/project/project-name`
+1. You may want to run `php composer.phar self-update` if you saw a warning message
+1. Go to the `composer.json` file in the top level of your new ZF2 project folder and make it look like this:
+
+		{
+			"name": "zendframework/skeleton-application",
+			"description": "Skeleton Application for ZF2",
+			"license": "BSD-3-Clause",
+			"keywords": [
+				"framework",
+				"zf2"
+			],    
+			"homepage": "http://framework.zend.com/",
+			"minimum-stability": "dev",
+			"require": {
+				"php": ">=5.3.3",
+				"zendframework/zendframework": "2.*",
+				"dkcwd/dkcwd-zf2-munee": "*"
+			}
+		}  
+
+1. Run `php composer.phar update`
+1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable or else it won't work
+1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules		
 
 Usage Instructions
 ------------------
