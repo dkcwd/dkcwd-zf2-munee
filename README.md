@@ -36,7 +36,7 @@ Just for reference when using Composer, if you have a slow connection consider u
 
 ### If you have a Zf2 project set up which you can use ###
 
-1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "*"` making sure your `"minimum-stability"` setting is set to `"dev"` as an example assuming no other requirements are specified your composer.json file would look like this:
+1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "*"` making sure your `"minimum-stability"` setting is set to `"dev"` so as an example, assuming no other requirements are meant to be specified your composer.json file, the composer.json file would look like this:
 
 		{
 			"name": "zendframework/skeleton-application",
@@ -58,7 +58,25 @@ Just for reference when using Composer, if you have a slow connection consider u
 1. Run `curl -s http://getcomposer.org/installer | php`
 1. Run `php composer.phar update`
 1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable or else it won't work
-1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules
+1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules.  As an example assuming no other modules are in use except for the `Application` module which comes with the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) it would look like this:
+
+		<?php
+		return array(
+			'modules' => array(
+				'Application',
+				'DkcwdZf2Munee'
+			),
+			'module_listener_options' => array(
+				'config_glob_paths'    => array(
+					'config/autoload/{,*.}{global,local}.php',
+				),
+				'module_paths' => array(
+					'./module',
+					'./vendor',
+				),
+			),
+		);
+
 
 ### If you do not have a Zf2 project set up which you can use ###
 
@@ -87,7 +105,25 @@ Just for reference when using Composer, if you have a slow connection consider u
 
 1. Run `php composer.phar update`
 1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable or else it won't work
-1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules		
+1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules.  As an example assuming no other modules are in use except for the `Application` module which comes with the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) it would look like this:
+
+		<?php
+		return array(
+			'modules' => array(
+				'Application',
+				'DkcwdZf2Munee'
+			),
+			'module_listener_options' => array(
+				'config_glob_paths'    => array(
+					'config/autoload/{,*.}{global,local}.php',
+				),
+				'module_paths' => array(
+					'./module',
+					'./vendor',
+				),
+			),
+		);
+		
 
 Usage Instructions
 ------------------
