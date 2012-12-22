@@ -44,11 +44,13 @@ Usage Instructions
 
 ### View Helpers ###
 
-The functionality provided by munee is accessed using view helpers in your ZF2 application view scripts.  The most likely place you will use the CSS and Js view helpers is within your layout script for generating a correctly formatted link to aggregate all your css and javascript files.  There are 3 view helpers:
+The functionality provided by munee is accessed using view helpers in your ZF2 application view scripts. There are 3 view helpers:
 
 + MuneeCss($arrayOfCssFiles, $minify = true) for working with CSS files
 + MuneeImg($pathToImage, $resizeParams, $anyAdditionalHtmlAttibutes = null) for working with images
 + MunneJs($arrayOfJsFiles, $minify = true) for working with Js files
+
+The most likely place you will use the CSS and Js view helpers is within your layout script for generating a correctly formatted link to aggregate all your css and javascript files. 
 
 
 **MuneeCss: One Request For All CSS with auto minification**
@@ -58,7 +60,7 @@ All CSS is automatically compiled through LESS and cached, there is nothing extr
 Example usage: In your view script do
 
     echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'));
-to output a formatted request which will allow all css files specified to be handled and minified in one request, alternatively you can do
+to output a formatted stylesheet link which will allow all css files specified to be handled and minified in one request, alternatively you can do
     
 	echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'), false);    
 for the same result but without minification.
@@ -91,7 +93,7 @@ All JavaScript is served through Munee so that it can handle the client side cac
 Example usage: In your view script do
 
     echo $this->MuneeJs(array('/js/script1.js', '/js/script2.js'));
-to output a formatted request which will allow all js files specified to be handled and minified in one request, alternatively you can do
+to output a formatted script link which will allow all js files specified to be handled and minified in one request, alternatively you can do
 
     echo $this->MuneeCss(array('/js/script1.js', '/js/script2.js'), false);    
 for the same result but without minification.
