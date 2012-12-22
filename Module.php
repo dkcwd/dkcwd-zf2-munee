@@ -3,9 +3,8 @@
  * DkcwdZf2Munee is a ZF2 module which brings the joy of Cody Lundquist's asset optimisation
  * library called 'munee' to ZF2 applications.
  *  
- * It is easy to implement and avoids the need for a munee.php file or .htaccess file changes 
- * by using a custom route with a single controller while providing some simple ZF2 view 
- * helpers for additional convenience when leveraging the functionality provided by munee.
+ * It is easy to implement and provides access to the features of munee through 3 ZF2 view 
+ * helpers, 1 custom route and 1 simple controller.
  * 
  * View Helpers usage in view scripts
  * ----------------------------------
