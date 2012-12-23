@@ -36,7 +36,7 @@ Just for reference when using Composer, if you have a slow connection consider u
 
 ### If you have a Zf2 project set up which you can use ###
 
-1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "*"` making sure your `"minimum-stability"` setting is set to `"dev"` so as an example, assuming no other requirements are meant to be specified your composer.json file, the composer.json file would look like this:
+1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "*"` making sure your `"minimum-stability"` setting is set to `"dev"` so as an example, if you are using the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) and if no other requirements are meant to be specified your main composer.json file, the composer.json file should be updated to look like this:
 
 		{
 			"name": "zendframework/skeleton-application",
@@ -152,7 +152,7 @@ to output a formatted stylesheet link which will allow all css files specified t
 for the same result but without minification.
 
 
-**Handling/Resizing Images**
+**MuneeImg: Handling/Resizing Images**
 
 Using Munee, you resize/crop/stretch/fill images on-the-fly using a set of parameters.  The resulting image will be cached and served up on subsequent requests.  If the source image is modified, it will recreate the cache then invalidate the client side cache and force the browser to download the newest version.
 
@@ -172,7 +172,7 @@ Resize Parameters - Parameters can either be in long form or use their shortened
 + `quality` (or `q`) - JPEG compression value. Default is: `75` - It will only work for JPEG's.
 
 
-**One Request For All JS with auto minification**
+**MuneeJs: One Request For All JS with auto minification**
 
 All JavaScript is served through Munee so that it can handle the client side caching.
 
