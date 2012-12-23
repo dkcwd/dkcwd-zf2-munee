@@ -57,7 +57,6 @@ Just for reference when using Composer, if you have a slow connection consider u
 
 1. Run `curl -s http://getcomposer.org/installer | php`
 1. Run `php composer.phar update`
-1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable or else it won't work
 1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules.  As an example assuming no other modules are in use except for the `Application` module which comes with the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) it would look like this:
 
 		<?php
@@ -76,7 +75,7 @@ Just for reference when using Composer, if you have a slow connection consider u
 				),
 			),
 		);
-
+1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable or else it won't work
 
 ### If you do not have a Zf2 project set up which you can use ###
 
@@ -104,7 +103,6 @@ Just for reference when using Composer, if you have a slow connection consider u
 		}  
 
 1. Run `php composer.phar update`
-1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable or else it won't work
 1. Once the installation is complete go to your ZF2 `application.config.php` file and add `'DkcwdZf2Munee'` to the list of modules.  As an example assuming no other modules are in use except for the `Application` module which comes with the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) it would look like this:
 
 		<?php
@@ -123,7 +121,7 @@ Just for reference when using Composer, if you have a slow connection consider u
 				),
 			),
 		);
-		
+1. Make sure the `cache` folder inside `vendor/meenie/munee` is writable or else it won't work		
 
 Usage Instructions
 ------------------
