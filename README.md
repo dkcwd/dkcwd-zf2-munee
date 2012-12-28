@@ -36,7 +36,7 @@ Just for reference when using Composer, if you have a slow connection consider u
 
 ### If you have a Zf2 project set up which you can use ###
 
-1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "v1.2.0"` so as an example, if you are using the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) and if no other requirements are meant to be specified in your main composer.json file, the composer.json file should be updated to look like this:
+1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "v1.2.*"` so as an example, if you are using the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) and if no other requirements are meant to be specified in your main composer.json file, the composer.json file should be updated to look like this:
 
 		{
 			"name": "zendframework/skeleton-application",
@@ -46,12 +46,11 @@ Just for reference when using Composer, if you have a slow connection consider u
 				"framework",
 				"zf2"
 			],    
-			"homepage": "http://framework.zend.com/",
-			"minimum-stability": "dev",
+			"homepage": "http://framework.zend.com/",			
 			"require": {
 				"php": ">=5.3.3",
 				"zendframework/zendframework": "2.*",
-				"dkcwd/dkcwd-zf2-munee": "v1.2.0"
+				"dkcwd/dkcwd-zf2-munee": "v1.2.*"
 			}
 		}  
 
@@ -93,12 +92,11 @@ Just for reference when using Composer, if you have a slow connection consider u
 				"framework",
 				"zf2"
 			],    
-			"homepage": "http://framework.zend.com/",
-			"minimum-stability": "dev",
+			"homepage": "http://framework.zend.com/",			
 			"require": {
 				"php": ">=5.3.3",
 				"zendframework/zendframework": "2.*",
-				"dkcwd/dkcwd-zf2-munee": "v1.2.0"
+				"dkcwd/dkcwd-zf2-munee": "v1.2.*"
 			}
 		}  
 
@@ -143,10 +141,10 @@ All CSS is automatically compiled through LESS and cached, there is nothing extr
 
 Example usage: In your view script do
 
-    echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'));
+    echo $this->muneeCss(array('/css/style.css', '/css/other-style.css'));
 to output a formatted stylesheet link which will allow all css files specified to be handled and minified in one request, alternatively you can do
     
-	echo $this->MuneeCss(array('/css/style.css', '/css/other-style.css'), false);    
+	echo $this->muneeCss(array('/css/style.css', '/css/other-style.css'), false);    
 for the same result but without minification.
 
 
@@ -156,7 +154,7 @@ Using Munee, you resize/crop/stretch/fill images on-the-fly using a set of param
 
 Example usage: In your view script do
 
-    echo $this->MuneeImg('path-to-image.jpg', 'w[100]h[100]');
+    echo $this->muneeImg('path-to-image.jpg', 'w[100]h[100]');
 to output a formatted request using the chosen resize parameters.  You can specify any additional image attributes such as an id or class by supplying an array full of key value pairs as a third parameter like this: `array('class' => 'myImageClass', 'rel' => 'someTrigger')`         
 
 Resize Parameters - Parameters can either be in long form or use their shortened form.  The value for an alias must be wrapped in square brackets `[]`. There is no need to put any characters between each parameter, although you can if you want.
@@ -176,10 +174,10 @@ All JavaScript is served through Munee so that it can handle the client side cac
 
 Example usage: In your view script do
 
-    echo $this->MuneeJs(array('/js/script1.js', '/js/script2.js'));
+    echo $this->muneeJs(array('/js/script1.js', '/js/script2.js'));
 to output a formatted script link which will allow all js files specified to be handled and minified in one request, alternatively you can do
 
-    echo $this->MuneeCss(array('/js/script1.js', '/js/script2.js'), false);    
+    echo $this->muneeCss(array('/js/script1.js', '/js/script2.js'), false);    
 for the same result but without minification.
 
 Hope you enjoy using this module :-)
