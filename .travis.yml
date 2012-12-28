@@ -4,7 +4,7 @@ php:
   - "5.3"
 
 env: 
-  - ZF2_PATH=zf2/library
+  - ZF2_PATH=ZF2/library
   
 before_script:
   - cd ..
