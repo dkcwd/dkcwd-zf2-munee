@@ -7,8 +7,9 @@ before_script:
   - cd ..
   - git clone git://github.com/zendframework/ZendSkeletonApplication.git
   - cd ZendSkeletonApplication
-  - git submodule update --init --recursive
-  - cp ../dkcwd-zf2-munee/composer.json ./
+  - rm .gitmodules
+  - git rm --cached vendor/ZF2
+  - cp ../dkcwd-zf2-munee/test/composer.json ./
   - curl -s http://getcomposer.org/installer | php
   - php composer.phar install
   - rm -rf vendor/dkcwd/dkcwd-zf2-munee

@@ -1,0 +1,12 @@
+{
+    "minimum-stability": "dev",
+    "require": {        
+        "dkcwd/dkcwd-zf2-munee": "v1.2.*",
+        "zendframework/zendframework": "2.0.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sds\\DoctrineExtensionsModule\\Test": "vendor/superdweebie/doctrine-extensions-module/tests"
+        }
+    }
+}
