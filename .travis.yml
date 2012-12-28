@@ -19,5 +19,5 @@ before_script:
   - mv config/test.application.config.php config/application.config.php
   
 script:
-  - cd vendor/dkcwd/dkcwd-zf2-munee/test
+  - cd ../dkcwd-zf2-munee/test/
   - phpunit
