@@ -1,6 +1,5 @@
 {    
     "require": {        
-        "dkcwd/dkcwd-zf2-munee": "1.2.*",
-        "zendframework/zendframework": "2.0.*"
+        "dkcwd/dkcwd-zf2-munee": "1.2.*"
     }
 }
