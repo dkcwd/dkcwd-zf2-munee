@@ -1,4 +1,10 @@
 <?php 
+/**
+ * @link http://github.com/dkcwd/dkcwd-zf2-munee for the canonical source repository
+ * @author Dave Clark dave@dkcwd.com.au
+ * @copyright (c) Dave Clark 2012 (https://www.dkcwd.com.au)
+ * @license http://opensource.org/licenses/mit-license.php
+ */
 
 namespace DkcwdZf2Munee\View\Helpers;
 

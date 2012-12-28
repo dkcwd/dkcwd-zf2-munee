@@ -37,7 +37,7 @@
  *     false // optional, if you do want the js to be minified then leave this param out 
  * );
  * 
- * @link http://github.com/dkcwd/DkcwdZf2Munee for the canonical source repository
+ * @link http://github.com/dkcwd/dkcwd-zf2-munee for the canonical source repository
  * @author Dave Clark dave@dkcwd.com.au
  * @copyright (c) Dave Clark 2012 (https://www.dkcwd.com.au)
  * @license http://opensource.org/licenses/mit-license.php

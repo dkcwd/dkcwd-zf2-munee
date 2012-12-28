@@ -1,6 +1,6 @@
 <?php
 /** 
- * @link http://github.com/dkcwd/DkcwdMunee for the canonical source repository
+ * @link http://github.com/dkcwd/dkcwd-zf2-munee for the canonical source repository
  * @author Dave Clark dave@dkcwd.com.au 
  * @copyright Dave Clark 2012
  * @license http://opensource.org/licenses/mit-license.php
