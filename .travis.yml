@@ -2,3 +2,22 @@ language: php
 php:
   - "5.4"
   - "5.3"
+  
+before_script:
+  - cd ..
+  - git clone git://github.com/zendframework/ZendSkeletonApplication.git
+  - cd ZendSkeletonApplication
+  - rm .gitmodules
+  - git rm --cached vendor/ZF2
+  - cp ../dkcwd-zf2-munee/composer.json ./
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install
+  - rm -rf vendor/dkcwd/dkcwd-zf2-munee
+  - cp -r ../dkcwd-zf2-munee vendor/dkcwd/
+  - rm config/application.config.php
+  - cp ../dkcwd-zf2-munee/test/test.application.config.php config/
+  - mv config/test.application.config.php config/application.config.php
+  
+script:
+  - cd vendor/dkcwd/dkcwd-zf2-munee/test
+  - phpunit
