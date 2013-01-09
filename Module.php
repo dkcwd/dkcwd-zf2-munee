@@ -11,7 +11,7 @@
  * 
  * MuneeCss - used to generate a string which will call the custom route to handle css
  * Example usage: 
- * echo $this->MuneeCss(array(
+ * echo $this->muneeCss(array(
  *     '/css/bootstrap-responsive.min.css', 
  *     '/css/style.css', 
  *     '/css/bootstrap.min.css'
@@ -21,7 +21,7 @@
  * 
  * MuneeImg - used to generate a string which will call the custom route to handle images
  * Example usage: 
- * echo $this->MuneeImg(
+ * echo $this->muneeImg(
  *     'path-to-file.jpg', 
  *     'width[100]-height[50]', 
  *     array('atributeKey' => 'attributeValue') // optional, the default is null     
@@ -29,7 +29,7 @@
  * 
  * MuneeJs - used to generate a string which will call the custom route to handle js files
  * Example usage: 
- * echo $this->MuneeJs(array(
+ * echo $this->muneeJs(array(
  *     '/scripts/myscript.js', 
  *     '/scripts/myscript2.js', 
  *     '/scripts/myscript3.js'
