@@ -134,14 +134,14 @@ The functionality provided by munee is accessed using view helpers in your ZF2 a
 
 + MuneeCss($arrayOfCssFiles, $minify = true) for working with CSS files
 + MuneeImg($pathToImage, $resizeParams, $anyAdditionalHtmlAttibutes = null) for working with images
-+ MunneJs($arrayOfJsFiles, $minify = true) for working with Js files
++ MuneeJs($arrayOfJsFiles, $minify = true) for working with Js files
 
 The most likely place you will use the CSS and Js view helpers is within your layout script for generating a correctly formatted link to aggregate all your css and javascript files. 
 
 
 **MuneeCss: One Request For All CSS with auto minification**
 
-All CSS is automatically compiled through LESS and cached, there is nothing extra that you need to do.  Any changes you make to your CSS, even LESS files you have `@import` will automatically recreate the cache then invalidate the client side cache and force the browser to download the newest version.
+All LESS files are automatically compiled through lessphp and cached, there is nothing extra that you need to do. Any changes you make to your CSS, even LESS files you have @import will automatically recreate the cache, invalidate the client side cache, and force the browser to download the newest version.
 
 Example usage: In your view script do
 
