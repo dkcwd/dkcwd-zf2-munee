@@ -3,7 +3,9 @@ Use munee to optimise assets in your ZF2 Application
 
 ---
 
-Build Status: [![Build Status](https://travis-ci.org/dkcwd/dkcwd-zf2-munee.png?branch=master)](https://travis-ci.org/dkcwd/dkcwd-zf2-munee)
+Build Status for DkcwdZf2Munee: [![Build Status](https://travis-ci.org/dkcwd/dkcwd-zf2-munee.png?branch=master)](https://travis-ci.org/dkcwd/dkcwd-zf2-munee)
+
+Build Status for Munee: [![Build Status](https://secure.travis-ci.org/meenie/munee.png?branch=master)](http://travis-ci.org/meenie/munee)
 
 Purpose of the module
 ---------------------
