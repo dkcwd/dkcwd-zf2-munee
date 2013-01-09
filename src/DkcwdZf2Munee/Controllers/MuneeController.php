@@ -32,6 +32,6 @@ class MuneeController extends AbstractActionController
      */
     public function muneeAction()
     {         
-        echo Dispatcher::run(new Request(array('css' => array('lessifyAllCss' => true))));
+        echo Dispatcher::run(new Request(array('css' => array('lessifyAllCss' => false))));
     }
 }
