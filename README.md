@@ -42,7 +42,7 @@ Just for reference when using Composer, if you have a slow connection consider u
 
 ### If you have a Zf2 project set up which you can use ###
 
-1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "v1.2.*"` so as an example, if you are using the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) and if no other requirements are meant to be specified in your main composer.json file, the composer.json file should be updated to look like this:
+1. Go to your main ZF2 application `composer.json` file and add `"dkcwd/dkcwd-zf2-munee": "1.2.*"` so as an example, if you are using the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication) and if no other requirements are meant to be specified in your main composer.json file, the composer.json file should be updated to look like this:
 
 		{
 			"name": "zendframework/skeleton-application",
@@ -56,7 +56,7 @@ Just for reference when using Composer, if you have a slow connection consider u
 			"require": {
 				"php": ">=5.3.3",
 				"zendframework/zendframework": "2.*",
-				"dkcwd/dkcwd-zf2-munee": "v1.2.*"
+				"dkcwd/dkcwd-zf2-munee": "1.2.*"
 			}
 		}  
 
@@ -102,7 +102,7 @@ Just for reference when using Composer, if you have a slow connection consider u
 			"require": {
 				"php": ">=5.3.3",
 				"zendframework/zendframework": "2.*",
-				"dkcwd/dkcwd-zf2-munee": "v1.2.*"
+				"dkcwd/dkcwd-zf2-munee": "1.2.*"
 			}
 		}  
 
