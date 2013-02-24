@@ -4,7 +4,7 @@ php:
   - "5.3"
 
 env: 
-  - ZF2_PATH=/home/travis/builds/dkcwd/ZendSkeletonApplication/vendor/ZF2/library
+  - ZF2_PATH=/home/travis/build/dkcwd/ZendSkeletonApplication/vendor/ZF2/library
   
 before_script:
   - cd ..
