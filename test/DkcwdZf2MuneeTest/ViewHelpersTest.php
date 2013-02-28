@@ -50,6 +50,13 @@ class ViewHelpersTest extends TestCase
                 $result
         );
         
+        // Where an array containing string values is passed as the first param and no element wrapper is desired
+        $result = $MuneeCss(array('/css/style.css', '/css/mystyle.css'), false, false);
+        $this->assertSame(
+                '/munee?files=/css/style.css,/css/mystyle.css&minify=false' . PHP_EOL,
+                $result
+        );
+        
     }
     
     public function testMuneeCssDoesNotGenerateStylesheetLinkIfFirstParamIsNotAnArrayAndTheArrayDoesNotContainAtLeastOneStringValue()
@@ -134,6 +141,13 @@ class ViewHelpersTest extends TestCase
         $result = $MuneeJs(array('/myscript1.js', '/myscript2.js'), false);
         $this->assertSame(
                 '<script src="/munee?files=/myscript1.js,/myscript2.js&minify=false"></script>' . PHP_EOL,
+                $result
+        );
+        
+        // Where an array containing string values is passed as the first param and no element wrapper is desired
+        $result = $MuneeJs(array('/myscript1.js', '/myscript2.js'), false, false);
+        $this->assertSame(
+                '/munee?files=/myscript1.js,/myscript2.js&minify=false' . PHP_EOL,
                 $result
         );
     
