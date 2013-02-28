@@ -9,6 +9,7 @@
 namespace DkcwdZf2Munee\Controllers;
 
 use \Zend\Mvc\Controller\AbstractActionController;
+use \Zend\View\Model\ViewModel;
 use \munee\Dispatcher;
 use \munee\Request;
 
@@ -32,7 +33,7 @@ class MuneeController extends AbstractActionController
      */
     public function muneeAction()
     {         
-        echo Dispatcher::run(new Request(array('css' => array('lessifyAllCss' => false))));
-        exit;
+        echo Dispatcher::run(new Request());
+        exit();
     }
 }
