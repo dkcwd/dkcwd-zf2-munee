@@ -10,8 +10,8 @@ namespace DkcwdZf2Munee\Controllers;
 
 use \Zend\Mvc\Controller\AbstractActionController;
 use \Zend\View\Model\ViewModel;
-use \munee\Dispatcher;
-use \munee\Request;
+use \Munee\Dispatcher;
+use \Munee\Request;
 
 /**
  * A controller to make use of Munee by Cody Lunquist in a ZF2 module.
